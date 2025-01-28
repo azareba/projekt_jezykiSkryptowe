@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyszukiwarka noclegów</title>
+    <link rel="stylesheet" href="/search/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Znajdź idealny nocleg</h1>
+    </header>
+    <div class="container">
+        <form id="searchForm">
+            <!-- destination -->
+            <div class="form-group">
+                <label for="destination">Dokąd się wybierasz?</label>
+                <select id="destination" name="destination" required>
+                    <option value="" disabled selected>Wybierz miejscowość</option>
+                    <option value="Warszawa">Warszawa</option>
+                    <option value="Kraków">Kraków</option>
+                    <option value="Gdańsk">Gdańsk</option>
+                </select>
+            </div>
+
+            <!-- data pobytu od do -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="checkin">Data zameldowania</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout">Data wymeldowania</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+            </div>
+            <!-- liczba osob i pokoje -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="adults">Dorośli</label>
+                    <input type="number" id="adults" name="adults" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="children">Dzieci</label>
+                    <input type="number" id="children" name="children" min="0" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="rooms">Pokoje</label>
+                    <input type="number" id="rooms" name="rooms" min="1" value="1" required>
+                </div>
+            </div>
+
+            <button type="submit">Szukaj</button>
+        </form>
+        <div id="offersResult"></div>
+    </div>
+    <!-- link do skryptu z js -->
+    <script src="/search/script.js"></script>
+    
+</body>
+</html>

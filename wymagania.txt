@@ -1,0 +1,22 @@
+Przygotuj aplikację typu KLIENT-SERWER.
+Klient przygotowany w technologii HTML+JavaScript+Fetch
+Klient początkowo ma wyświetlać formularz do wyszukiwania ofert noclegowych (mieszkań lub domów), 
+w 3 wybranych miejscowościach. Pola prezentowane poniżej obowiązkowe.
+ (dokad sie wybierasz, data zaleldowania-wymeldowania,l.doroslych-l.dieci-l.pokoji)
+
+Po ustawieniu parametrów  i kliknięciu szukaj pojawia się okno ofertami (jedna oferta pod drugą).
+Obowiązkowo nazwa noclegu, zdjęcie, mapka, opis mieszkania, cena, przycisk rezerwuj
+
+Po wybraniu oferty pojawia się formularz  do rezerwacji (pola obowiązkowe):
+imie, nazwisko, email, kraj/region, nr telefonu z odpowiednim kierunkowym, przycisk zarezerwuj
+
+Żądania zostają przekazane Fetchem do serwera z wystawionym API, który zwraca oferty lub rezerwacje do bazy danych.
+
+Serwer odbiera dane z formularza od klienta i sprawdza ogłoszenia w bazie (dowolna – raczej relacyjna) i zwraca do klienta lub zapisuje (w zależności od żądania).
+
+----------------------
+do zrobienia:
+[] mapka
+[] chyba musza byc 3 obiekty dla jednego miasta
+[+]opis mieszkania adres
+[] zdjecie mieszkania
